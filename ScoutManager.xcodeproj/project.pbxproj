@@ -7,36 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E146EDC2AEFDE1D007D104B /* CensimentiTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */; };
+		9E146EFD2AEFF534007D104B /* CensimentiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDD2AEFF31B007D104B /* CensimentiTests.swift */; };
+		9E146EFE2AEFF5C2007D104B /* CensimentiTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */; };
 		9EBFE1C52AEFA79E009F5650 /* ScoutManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C42AEFA79E009F5650 /* ScoutManagerApp.swift */; };
-		9EBFE1C72AEFA79E009F5650 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C62AEFA79E009F5650 /* ContentView.swift */; };
+		9EBFE1C72AEFA79E009F5650 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C62AEFA79E009F5650 /* MainView.swift */; };
 		9EBFE1C92AEFA7A4009F5650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C82AEFA7A4009F5650 /* Assets.xcassets */; };
 		9EBFE1CC2AEFA7A4009F5650 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBFE1CB2AEFA7A4009F5650 /* Preview Assets.xcassets */; };
+		9EBFE1D72AEFAD59009F5650 /* libcensimenti_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBFE1D42AEFA90D009F5650 /* libcensimenti_parser.a */; };
+		9ED8223B2AF0481000774E45 /* PresenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223A2AF0481000774E45 /* PresenceStorage.swift */; };
+		9ED8223D2AF04DA600774E45 /* UnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223C2AF04DA600774E45 /* UnitListView.swift */; };
+		9ED8223F2AF04EF600774E45 /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9E146EF82AEFF4D9007D104B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9EBFE1B92AEFA79E009F5650 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9EBFE1C02AEFA79E009F5650;
+			remoteInfo = ScoutManager;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		9E146EDA2AEFDB05007D104B /* ScoutManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScoutManager.entitlements; sourceTree = "<group>"; };
+		9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CensimentiTypes.swift; sourceTree = "<group>"; };
+		9E146EDD2AEFF31B007D104B /* CensimentiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CensimentiTests.swift; sourceTree = "<group>"; };
+		9E146EDF2AEFF395007D104B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		9E146EF42AEFF4D9007D104B /* ScoutManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBFE1C12AEFA79E009F5650 /* ScoutManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBFE1C42AEFA79E009F5650 /* ScoutManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutManagerApp.swift; sourceTree = "<group>"; };
-		9EBFE1C62AEFA79E009F5650 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		9EBFE1C62AEFA79E009F5650 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		9EBFE1C82AEFA7A4009F5650 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9EBFE1CB2AEFA7A4009F5650 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		9EBFE1D42AEFA90D009F5650 /* libcensimenti_parser.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcensimenti_parser.a; sourceTree = "<group>"; };
+		9EBFE1D52AEFA93B009F5650 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		9EBFE1D62AEFA970009F5650 /* parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = parser.h; sourceTree = "<group>"; };
+		9ED8223A2AF0481000774E45 /* PresenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceStorage.swift; sourceTree = "<group>"; };
+		9ED8223C2AF04DA600774E45 /* UnitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListView.swift; sourceTree = "<group>"; };
+		9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9EBFE1BE2AEFA79E009F5650 /* Frameworks */ = {
+		9E146EF12AEFF4D9007D104B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9EBFE1BE2AEFA79E009F5650 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9EBFE1D72AEFAD59009F5650 /* libcensimenti_parser.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E146EE82AEFF451007D104B /* ScoutManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				9E146EDD2AEFF31B007D104B /* CensimentiTests.swift */,
+			);
+			path = ScoutManagerTests;
+			sourceTree = "<group>";
+		};
 		9EBFE1B82AEFA79E009F5650 = {
 			isa = PBXGroup;
 			children = (
 				9EBFE1C32AEFA79E009F5650 /* ScoutManager */,
+				9E146EE82AEFF451007D104B /* ScoutManagerTests */,
 				9EBFE1C22AEFA79E009F5650 /* Products */,
+				9EBFE1D22AEFA8ED009F5650 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -44,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				9EBFE1C12AEFA79E009F5650 /* ScoutManager.app */,
+				9E146EF42AEFF4D9007D104B /* ScoutManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -51,10 +98,16 @@
 		9EBFE1C32AEFA79E009F5650 /* ScoutManager */ = {
 			isa = PBXGroup;
 			children = (
+				9E146EDA2AEFDB05007D104B /* ScoutManager.entitlements */,
 				9EBFE1C42AEFA79E009F5650 /* ScoutManagerApp.swift */,
-				9EBFE1C62AEFA79E009F5650 /* ContentView.swift */,
+				9EBFE1C62AEFA79E009F5650 /* MainView.swift */,
 				9EBFE1C82AEFA7A4009F5650 /* Assets.xcassets */,
 				9EBFE1CA2AEFA7A4009F5650 /* Preview Content */,
+				9EBFE1D62AEFA970009F5650 /* parser.h */,
+				9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */,
+				9ED8223A2AF0481000774E45 /* PresenceStorage.swift */,
+				9ED8223C2AF04DA600774E45 /* UnitListView.swift */,
+				9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */,
 			);
 			path = ScoutManager;
 			sourceTree = "<group>";
@@ -67,9 +120,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9EBFE1D22AEFA8ED009F5650 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9E146EDF2AEFF395007D104B /* XCTest.framework */,
+				9EBFE1D52AEFA93B009F5650 /* libresolv.tbd */,
+				9EBFE1D42AEFA90D009F5650 /* libcensimenti_parser.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9E146EF32AEFF4D9007D104B /* ScoutManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9E146EFA2AEFF4DA007D104B /* Build configuration list for PBXNativeTarget "ScoutManagerTests" */;
+			buildPhases = (
+				9E146EF02AEFF4D9007D104B /* Sources */,
+				9E146EF12AEFF4D9007D104B /* Frameworks */,
+				9E146EF22AEFF4D9007D104B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9E146EF92AEFF4D9007D104B /* PBXTargetDependency */,
+			);
+			name = ScoutManagerTests;
+			productName = ScoutManagerTests;
+			productReference = 9E146EF42AEFF4D9007D104B /* ScoutManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9EBFE1C02AEFA79E009F5650 /* ScoutManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9EBFE1CF2AEFA7A4009F5650 /* Build configuration list for PBXNativeTarget "ScoutManager" */;
@@ -97,6 +178,10 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					9E146EF32AEFF4D9007D104B = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 9EBFE1C02AEFA79E009F5650;
+					};
 					9EBFE1C02AEFA79E009F5650 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -116,11 +201,19 @@
 			projectRoot = "";
 			targets = (
 				9EBFE1C02AEFA79E009F5650 /* ScoutManager */,
+				9E146EF32AEFF4D9007D104B /* ScoutManagerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9E146EF22AEFF4D9007D104B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EBFE1BF2AEFA79E009F5650 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -133,18 +226,75 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9E146EF02AEFF4D9007D104B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9E146EFE2AEFF5C2007D104B /* CensimentiTypes.swift in Sources */,
+				9E146EFD2AEFF534007D104B /* CensimentiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9EBFE1BD2AEFA79E009F5650 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EBFE1C72AEFA79E009F5650 /* ContentView.swift in Sources */,
+				9E146EDC2AEFDE1D007D104B /* CensimentiTypes.swift in Sources */,
+				9ED8223D2AF04DA600774E45 /* UnitListView.swift in Sources */,
+				9EBFE1C72AEFA79E009F5650 /* MainView.swift in Sources */,
+				9ED8223B2AF0481000774E45 /* PresenceStorage.swift in Sources */,
+				9ED8223F2AF04EF600774E45 /* EnrollmentView.swift in Sources */,
 				9EBFE1C52AEFA79E009F5650 /* ScoutManagerApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9E146EF92AEFF4D9007D104B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9EBFE1C02AEFA79E009F5650 /* ScoutManager */;
+			targetProxy = 9E146EF82AEFF4D9007D104B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		9E146EFB2AEFF4DA007D104B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B6S4VJ8666;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.eutampieri.ScoutManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoutManager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScoutManager";
+			};
+			name = Debug;
+		};
+		9E146EFC2AEFF4DA007D104B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B6S4VJ8666;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = eu.eutampieri.ScoutManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScoutManager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ScoutManager";
+			};
+			name = Release;
+		};
 		9EBFE1CD2AEFA7A4009F5650 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -264,6 +414,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScoutManager/ScoutManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScoutManager/Preview Content\"";
@@ -279,10 +430,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = eu.eutampieri.ScoutManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ScoutManager/parser.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -293,6 +449,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScoutManager/ScoutManager.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScoutManager/Preview Content\"";
@@ -308,10 +465,15 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = eu.eutampieri.ScoutManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ScoutManager/parser.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -320,6 +482,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9E146EFA2AEFF4DA007D104B /* Build configuration list for PBXNativeTarget "ScoutManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9E146EFB2AEFF4DA007D104B /* Debug */,
+				9E146EFC2AEFF4DA007D104B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9EBFE1BC2AEFA79E009F5650 /* Build configuration list for PBXProject "ScoutManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

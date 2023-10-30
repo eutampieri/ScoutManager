@@ -11,7 +11,7 @@ import SwiftUI
 struct ScoutManagerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
