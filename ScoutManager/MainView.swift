@@ -11,10 +11,13 @@ struct MainView: View {
     var body: some View {
         TabView {
             UnitListView()
-            .tabItem({
-                Label("Unità", systemImage: "person.2.circle")
-            })
-            
+                .tabItem({
+                    Label("Unità", systemImage: "person.2")
+                })
+            ActivityView()
+                .tabItem({
+                    Label("Attività", systemImage: "calendar")
+                })
         }
     }
 }

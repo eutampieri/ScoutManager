@@ -18,6 +18,7 @@
 		9ED8223B2AF0481000774E45 /* PresenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223A2AF0481000774E45 /* PresenceStorage.swift */; };
 		9ED8223D2AF04DA600774E45 /* UnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223C2AF04DA600774E45 /* UnitListView.swift */; };
 		9ED8223F2AF04EF600774E45 /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */; };
+		9ED822412AF04F9000774E45 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED822402AF04F9000774E45 /* ActivityView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9ED8223A2AF0481000774E45 /* PresenceStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresenceStorage.swift; sourceTree = "<group>"; };
 		9ED8223C2AF04DA600774E45 /* UnitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListView.swift; sourceTree = "<group>"; };
 		9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentView.swift; sourceTree = "<group>"; };
+		9ED822402AF04F9000774E45 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				9ED8223A2AF0481000774E45 /* PresenceStorage.swift */,
 				9ED8223C2AF04DA600774E45 /* UnitListView.swift */,
 				9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */,
+				9ED822402AF04F9000774E45 /* ActivityView.swift */,
 			);
 			path = ScoutManager;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				9ED8223D2AF04DA600774E45 /* UnitListView.swift in Sources */,
 				9EBFE1C72AEFA79E009F5650 /* MainView.swift in Sources */,
 				9ED8223B2AF0481000774E45 /* PresenceStorage.swift in Sources */,
+				9ED822412AF04F9000774E45 /* ActivityView.swift in Sources */,
 				9ED8223F2AF04EF600774E45 /* EnrollmentView.swift in Sources */,
 				9EBFE1C52AEFA79E009F5650 /* ScoutManagerApp.swift in Sources */,
 			);
