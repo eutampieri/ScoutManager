@@ -40,6 +40,14 @@ struct UnitListView: View {
             }
             .searchable(text: $searchString)
             .navigationTitle("La tua unità")
+            .swipeActions(content: {
+                Button {
+                    print("Mark as favorite")
+                } label: {
+                    Label("Favorite", systemImage: "star")
+                }
+                .tint(.yellow)
+            })
         }
         .fileImporter( isPresented: $openFile, allowedContentTypes: [.item], allowsMultipleSelection: false, onCompletion: {
             (Result) in
