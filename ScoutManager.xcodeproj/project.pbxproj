@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0F2F582AF11E4F002D1AEA /* libcensimenti_parser_mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E0F2F572AF11E1A002D1AEA /* libcensimenti_parser_mac.a */; platformFilters = (macos, ); };
 		9E146EDC2AEFDE1D007D104B /* CensimentiTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */; };
 		9E146EFD2AEFF534007D104B /* CensimentiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDD2AEFF31B007D104B /* CensimentiTests.swift */; };
 		9E146EFE2AEFF5C2007D104B /* CensimentiTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */; };
@@ -14,7 +15,7 @@
 		9EBFE1C72AEFA79E009F5650 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C62AEFA79E009F5650 /* MainView.swift */; };
 		9EBFE1C92AEFA7A4009F5650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C82AEFA7A4009F5650 /* Assets.xcassets */; };
 		9EBFE1CC2AEFA7A4009F5650 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBFE1CB2AEFA7A4009F5650 /* Preview Assets.xcassets */; };
-		9EBFE1D72AEFAD59009F5650 /* libcensimenti_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBFE1D42AEFA90D009F5650 /* libcensimenti_parser.a */; };
+		9EBFE1D72AEFAD59009F5650 /* libcensimenti_parser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9EBFE1D42AEFA90D009F5650 /* libcensimenti_parser.a */; platformFilter = ios; };
 		9ED8223B2AF0481000774E45 /* PresenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223A2AF0481000774E45 /* PresenceStorage.swift */; };
 		9ED8223D2AF04DA600774E45 /* UnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223C2AF04DA600774E45 /* UnitListView.swift */; };
 		9ED8223F2AF04EF600774E45 /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E0F2F572AF11E1A002D1AEA /* libcensimenti_parser_mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcensimenti_parser_mac.a; sourceTree = "<group>"; };
 		9E146EDA2AEFDB05007D104B /* ScoutManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScoutManager.entitlements; sourceTree = "<group>"; };
 		9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CensimentiTypes.swift; sourceTree = "<group>"; };
 		9E146EDD2AEFF31B007D104B /* CensimentiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CensimentiTests.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9EBFE1D72AEFAD59009F5650 /* libcensimenti_parser.a in Frameworks */,
+				9E0F2F582AF11E4F002D1AEA /* libcensimenti_parser_mac.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +129,7 @@
 		9EBFE1D22AEFA8ED009F5650 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9E0F2F572AF11E1A002D1AEA /* libcensimenti_parser_mac.a */,
 				9E146EDF2AEFF395007D104B /* XCTest.framework */,
 				9EBFE1D52AEFA93B009F5650 /* libresolv.tbd */,
 				9EBFE1D42AEFA90D009F5650 /* libcensimenti_parser.a */,
@@ -419,6 +423,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ScoutManager/ScoutManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScoutManager/Preview Content\"";
@@ -439,9 +444,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = eu.eutampieri.ScoutManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ScoutManager/parser.h";
 				SWIFT_VERSION = 5.0;
@@ -455,6 +465,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = ScoutManager/ScoutManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"ScoutManager/Preview Content\"";
@@ -475,9 +486,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 12.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = eu.eutampieri.ScoutManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(PROJECT_DIR)/ScoutManager/parser.h";
 				SWIFT_VERSION = 5.0;

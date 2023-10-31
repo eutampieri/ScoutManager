@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ActivityView: View {
-    @State var activities: [Activity] = Activity.getUpcoming()
+    @State var activities: [Activity] = []
     var body: some View {
         NavigationView {
             List {
@@ -19,9 +19,15 @@ struct ActivityView: View {
                 }
             }.toolbar(content: {
                 ToolbarItem(content: {
-                    Text("Plus")
+                    Button(action: {}, label: {
+                        Image(systemName: "plus.circle")
+                    })
                 })
             })
+        }.task {
+            self.activities = await Activity.getUpcoming()
+        }.refreshable {
+            self.activities = await Activity.getUpcoming()
         }
     }
 }

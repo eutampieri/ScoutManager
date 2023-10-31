@@ -11,14 +11,15 @@ struct UnitListView: View {
     @State var enrollments: [Enrollment]?
     @State var openFile = true
     @State var searchString: String = ""
+    @State var upcoming: Activity?
     var body: some View {
         NavigationView {
             List {
                 ForEach(enrollments ?? []) { enrollment in
-                    if searchString == "" || searchString == "\(enrollment.details.name) \(enrollment.details.surname)" {
+                    if searchString == "" || "\(enrollment.details.name) \(enrollment.details.surname)".lowercased().contains(searchString.lowercased()) {
                         HStack {
                             Image(systemName: "person.circle.fill").foregroundColor({
-                                if let upcoming = Activity.getNext() {
+                                if let upcoming = self.upcoming {
                                     if enrollment.willBePresent(on: upcoming.date) {
                                         return .green
                                     } else {
@@ -37,13 +38,7 @@ struct UnitListView: View {
                     }
                 }
             }
-            .searchable(text: $searchString, suggestions: {
-                ForEach(enrollments ?? []) { e in
-                    if "\(e.details.name) \(e.details.surname)".lowercased().contains(searchString.lowercased()) {
-                        Text("\(e.details.name) \(e.details.surname)").searchCompletion("\(e.details.name) \(e.details.surname)")
-                    }
-                }
-            })
+            .searchable(text: $searchString)
             .navigationTitle("La tua unità")
         }
         .fileImporter( isPresented: $openFile, allowedContentTypes: [.item], allowsMultipleSelection: false, onCompletion: {
@@ -60,7 +55,9 @@ struct UnitListView: View {
                 print("error reading file \(error.localizedDescription)")
             }
             
-        })
+        }).task {
+            self.upcoming = await Activity.getNext()
+        }
     }
 }
 

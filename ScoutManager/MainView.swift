@@ -9,6 +9,23 @@ import SwiftUI
 
 struct MainView: View {
     var body: some View {
+#if os(macOS)
+        NavigationView {
+            List {
+                NavigationLink(destination: {
+                    UnitListView()
+                }, label: {
+                    Label("Unità", systemImage: "person.2")
+                })
+                NavigationLink(destination: {
+                    ActivityView()
+                }, label: {
+                    Label("Attività", systemImage: "calendar")
+                })
+
+            }
+        }
+#else
         TabView {
             UnitListView()
                 .tabItem({
@@ -19,6 +36,7 @@ struct MainView: View {
                     Label("Attività", systemImage: "calendar")
                 })
         }
+#endif
     }
 }
 

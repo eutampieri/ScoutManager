@@ -19,6 +19,7 @@ public struct Person: Hashable {
     var placeOfBirth: String?
     var fiscalCode: String?
     var sex: Sex?
+    var contacts: Contacts?
 }
 
 public struct PostalAddress: Codable, Hashable {
@@ -35,30 +36,11 @@ public struct Enrollment {
     var agesciId: Int?
     var details: Person
     var address: PostalAddress?
-    var parents: [(Person, Contacts)?]
+    var parents: [Person?]
     var privacy: (Bool, Bool, Bool)
 }
 
 public struct GenericDecodingError: Error {}
-
-private enum PersonOrContacts: Decodable {
-    case person(Person)
-    case contacts(Contacts)
-    init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if let value = try? container.decode(Person.self) {
-            self = PersonOrContacts.person(value)
-            return
-        }
-        
-        if let value = try? container.decode(Contacts.self) {
-            self = PersonOrContacts.contacts(value)
-            return
-        }
-        throw GenericDecodingError()
-    }
-
-}
 
 extension Sex: Decodable {
     public init(from decoder: Decoder) throws {
@@ -86,6 +68,7 @@ extension Person: Decodable {
         case placeOfBirth = "place_of_birth"
         case fiscalCode = "fiscal_code"
         case sex
+        case contacts
     }
     
     public init(from decoder: Decoder) throws {
@@ -96,6 +79,7 @@ extension Person: Decodable {
         let rawPlaceOfBirth = try? values.decode(String.self, forKey: .placeOfBirth)
         let rawFiscalCode = try? values.decode(String.self, forKey: .fiscalCode)
         let rawSex = try? values.decode(Sex.self, forKey: .sex)
+        let rawContacts = try? values.decode(Contacts.self, forKey: .contacts)
         
         guard let name = rawName,
               let surname = rawSurname
@@ -111,6 +95,7 @@ extension Person: Decodable {
         self.placeOfBirth = rawPlaceOfBirth
         self.fiscalCode = rawFiscalCode
         self.sex = rawSex
+        self.contacts = rawContacts
     }
 }
 
@@ -129,7 +114,7 @@ extension Enrollment: Decodable {
         let rawId = try? values.decode(Int.self, forKey: .id)
         let rawDetails = try? values.decode(Person.self, forKey: .details)
         let rawAddress = try? values.decode(PostalAddress.self, forKey: .address)
-        let rawParents = try? values.decode([[PersonOrContacts]?].self, forKey: .parents)
+        let rawParents = try? values.decode([Person?].self, forKey: .parents)
         let rawPrivacy = try? values.decode([Bool].self, forKey: .privacy)
         
         guard let details = rawDetails,
@@ -142,14 +127,7 @@ extension Enrollment: Decodable {
         self.agesciId = rawId
         self.details = details
         self.address = rawAddress
-        self.parents = [nil, nil]
-        for i in 0..<2 {
-            if let parent = parents[i] {
-                guard case let .person(details) = parent[0] else {throw GenericDecodingError()}
-                guard case let .contacts(contacts) = parent[1] else {throw GenericDecodingError()}
-                self.parents[i] = (details, contacts)
-            }
-        }
+        self.parents = parents
         self.privacy = (privacy[0], privacy[1], privacy[2])
     }
 }
