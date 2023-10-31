@@ -10,10 +10,18 @@ import SwiftUI
 struct ActivityView: View {
     @State var activities: [Activity] = Activity.getUpcoming()
     var body: some View {
-        List {
-            ForEach(activities) { activity in
-                NavigationLink(activity.title ?? "\(activity.date)", value: activity)
-            }
+        NavigationView {
+            List {
+                ForEach(activities) { activity in
+                    NavigationLink(activity.title ?? "\(activity.date)", destination: {
+                        Text("Activity")
+                    })
+                }
+            }.toolbar(content: {
+                ToolbarItem(content: {
+                    Text("Plus")
+                })
+            })
         }
     }
 }

@@ -24,7 +24,7 @@ struct Activity: Equatable, Hashable, Identifiable {
         Self.getUpcoming().first
     }
     public static func getUpcoming() -> [Self] {
-        let now = Date.now
+        let now = Date.init()
         return Self.getAll().sorted(by: { lhs, rhs in
             return lhs.date <= rhs.date
         }).filter({activity in
@@ -32,6 +32,7 @@ struct Activity: Equatable, Hashable, Identifiable {
         })
     }
     public static func getAll() -> [Self] {
+        let container = CKContainer.default().privateCloudDatabase
         return []
     }
 }
