@@ -32,12 +32,23 @@ public struct Contacts: Codable, Hashable {
     var email: String?
 }
 
-public struct Enrollment {
+public final class Enrollment: Identifiable, ObservableObject {
+    public init(id: UUID, details: Person, privacy: (Bool, Bool, Bool), agesciId: Int?, address: PostalAddress?, parents: [Person?]?) {
+        self.id = id
+        self.agesciId = agesciId
+        self.details = details
+        self.address = address
+        self.parents = parents ?? [nil, nil]
+        self.privacy = privacy
+        self.willBePresentAtNextActivity = nil
+    }
+    public var id: UUID
     var agesciId: Int?
     var details: Person
     var address: PostalAddress?
     var parents: [Person?]
     var privacy: (Bool, Bool, Bool)
+    @Published var willBePresentAtNextActivity: Bool?
 }
 
 public struct GenericDecodingError: Error {}
@@ -102,16 +113,18 @@ extension Person: Decodable {
 
 extension Enrollment: Decodable {
     private enum CodingKeys: String, CodingKey {
-        case id
+        case id = "_id"
+        case agesciId = "id"
         case details
         case address
         case parents
         case privacy
     }
     
-    public init(from decoder: Decoder) throws {
+    public convenience init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        let rawId = try? values.decode(Int.self, forKey: .id)
+        let rawId = try? values.decode(UUID.self, forKey: .id)
+        let rawAgesciId = try? values.decode(Int.self, forKey: .agesciId)
         let rawDetails = try? values.decode(Person.self, forKey: .details)
         let rawAddress = try? values.decode(PostalAddress.self, forKey: .address)
         let rawParents = try? values.decode([Person?].self, forKey: .parents)
@@ -119,20 +132,17 @@ extension Enrollment: Decodable {
         
         guard let details = rawDetails,
               let parents = rawParents,
+              let id = rawId,
               let privacy = rawPrivacy
         else {
             throw GenericDecodingError()
         }
         
-        self.agesciId = rawId
-        self.details = details
-        self.address = rawAddress
-        self.parents = parents
-        self.privacy = (privacy[0], privacy[1], privacy[2])
+        self.init(id: id, details: details, privacy: (privacy[0], privacy[1], privacy[2]), agesciId: rawAgesciId, address: rawAddress, parents: parents)
     }
 }
 
-extension Enrollment: Identifiable, Hashable {
+extension Enrollment: Hashable {
     public static func == (lhs: Enrollment, rhs: Enrollment) -> Bool {
         return !(
             lhs.id != rhs.id &&
@@ -144,11 +154,6 @@ extension Enrollment: Identifiable, Hashable {
     public func hash(into hasher: inout Hasher) {
         hasher.combine(self.id)
     }
-    
-    public var id: UUID {
-        UUID()
-    }
-    
 }
 
 func loadEnrollments(_ file: Data) throws -> [Enrollment] {

@@ -32,6 +32,6 @@ struct EnrollmentView: View {
 
 struct EnrollmentView_Previews: PreviewProvider {
     static var previews: some View {
-        EnrollmentView(enrollment: Enrollment(details: Person(name: "Mario", surname: "Rossi"), parents: [nil, nil], privacy: (true, false, false)))
+        EnrollmentView(enrollment: Enrollment(id: UUID(), details: Person(name: "Mario", surname: "Rossi"), privacy: (false, false, false), agesciId: nil, address: nil, parents: nil))
     }
 }
