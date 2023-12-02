@@ -22,7 +22,11 @@ struct MainView: View {
                 }, label: {
                     Label("Attività", systemImage: "calendar")
                 })
-
+                NavigationLink(destination: {
+                    SettingsView()
+                }, label: {
+                    Label("Impostazioni", systemImage: "gear")
+                })
             }
         }
 #else
@@ -34,6 +38,10 @@ struct MainView: View {
             ActivityView()
                 .tabItem({
                     Label("Attività", systemImage: "calendar")
+                })
+            SettingsView()
+                .tabItem({
+                    Label("Impostazioni", systemImage: "gear")
                 })
         }
 #endif

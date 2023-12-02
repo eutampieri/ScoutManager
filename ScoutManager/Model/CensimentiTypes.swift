@@ -12,7 +12,10 @@ public enum Sex: Hashable {
     case Female
 }
 
-public struct Person: Hashable {
+public struct Person: Hashable, Identifiable {
+    public var id: Int {get {
+        return self.hashValue
+    }}
     var name: String
     var surname: String
     var dateOfBirth: Date?

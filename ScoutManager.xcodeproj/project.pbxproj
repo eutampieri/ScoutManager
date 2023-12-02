@@ -11,6 +11,8 @@
 		9E146EDC2AEFDE1D007D104B /* CensimentiTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */; };
 		9E146EFD2AEFF534007D104B /* CensimentiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDD2AEFF31B007D104B /* CensimentiTests.swift */; };
 		9E146EFE2AEFF5C2007D104B /* CensimentiTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */; };
+		9EA8EB302B13DC1500C20D78 /* PresenceStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223A2AF0481000774E45 /* PresenceStorage.swift */; };
+		9EA8EB332B13DC7B00C20D78 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EA8EB322B13DC7B00C20D78 /* SettingsView.swift */; };
 		9EBFE1C52AEFA79E009F5650 /* ScoutManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C42AEFA79E009F5650 /* ScoutManagerApp.swift */; };
 		9EBFE1C72AEFA79E009F5650 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C62AEFA79E009F5650 /* MainView.swift */; };
 		9EBFE1C92AEFA7A4009F5650 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9EBFE1C82AEFA7A4009F5650 /* Assets.xcassets */; };
@@ -20,6 +22,10 @@
 		9ED8223D2AF04DA600774E45 /* UnitListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223C2AF04DA600774E45 /* UnitListView.swift */; };
 		9ED8223F2AF04EF600774E45 /* EnrollmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */; };
 		9ED822412AF04F9000774E45 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED822402AF04F9000774E45 /* ActivityView.swift */; };
+		9EDB8D2D2B0F3200005A28BD /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB8D2C2B0F3200005A28BD /* Group.swift */; };
+		9EDB8D2F2B0F3267005A28BD /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB8D2E2B0F3267005A28BD /* Settings.swift */; };
+		9EDB8D312B0F32B0005A28BD /* Roles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB8D302B0F32B0005A28BD /* Roles.swift */; };
+		9EDB8D332B0F333D005A28BD /* Branch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EDB8D322B0F333D005A28BD /* Branch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,7 @@
 		9E146EDD2AEFF31B007D104B /* CensimentiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CensimentiTests.swift; sourceTree = "<group>"; };
 		9E146EDF2AEFF395007D104B /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		9E146EF42AEFF4D9007D104B /* ScoutManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoutManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EA8EB322B13DC7B00C20D78 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9EBFE1C12AEFA79E009F5650 /* ScoutManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScoutManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9EBFE1C42AEFA79E009F5650 /* ScoutManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoutManagerApp.swift; sourceTree = "<group>"; };
 		9EBFE1C62AEFA79E009F5650 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -51,6 +58,10 @@
 		9ED8223C2AF04DA600774E45 /* UnitListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitListView.swift; sourceTree = "<group>"; };
 		9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollmentView.swift; sourceTree = "<group>"; };
 		9ED822402AF04F9000774E45 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
+		9EDB8D2C2B0F3200005A28BD /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		9EDB8D2E2B0F3267005A28BD /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		9EDB8D302B0F32B0005A28BD /* Roles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Roles.swift; sourceTree = "<group>"; };
+		9EDB8D322B0F333D005A28BD /* Branch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Branch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +92,31 @@
 			path = ScoutManagerTests;
 			sourceTree = "<group>";
 		};
+		9EA8EB2F2B13DBFF00C20D78 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */,
+				9ED8223A2AF0481000774E45 /* PresenceStorage.swift */,
+				9EDB8D2C2B0F3200005A28BD /* Group.swift */,
+				9EDB8D2E2B0F3267005A28BD /* Settings.swift */,
+				9EDB8D302B0F32B0005A28BD /* Roles.swift */,
+				9EDB8D322B0F333D005A28BD /* Branch.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9EA8EB312B13DC2500C20D78 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9EBFE1C62AEFA79E009F5650 /* MainView.swift */,
+				9ED8223C2AF04DA600774E45 /* UnitListView.swift */,
+				9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */,
+				9ED822402AF04F9000774E45 /* ActivityView.swift */,
+				9EA8EB322B13DC7B00C20D78 /* SettingsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		9EBFE1B82AEFA79E009F5650 = {
 			isa = PBXGroup;
 			children = (
@@ -103,17 +139,13 @@
 		9EBFE1C32AEFA79E009F5650 /* ScoutManager */ = {
 			isa = PBXGroup;
 			children = (
+				9EA8EB312B13DC2500C20D78 /* View */,
+				9EA8EB2F2B13DBFF00C20D78 /* Model */,
 				9E146EDA2AEFDB05007D104B /* ScoutManager.entitlements */,
 				9EBFE1C42AEFA79E009F5650 /* ScoutManagerApp.swift */,
-				9EBFE1C62AEFA79E009F5650 /* MainView.swift */,
 				9EBFE1C82AEFA7A4009F5650 /* Assets.xcassets */,
 				9EBFE1CA2AEFA7A4009F5650 /* Preview Content */,
 				9EBFE1D62AEFA970009F5650 /* parser.h */,
-				9E146EDB2AEFDE1D007D104B /* CensimentiTypes.swift */,
-				9ED8223A2AF0481000774E45 /* PresenceStorage.swift */,
-				9ED8223C2AF04DA600774E45 /* UnitListView.swift */,
-				9ED8223E2AF04EF600774E45 /* EnrollmentView.swift */,
-				9ED822402AF04F9000774E45 /* ActivityView.swift */,
 			);
 			path = ScoutManager;
 			sourceTree = "<group>";
@@ -237,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EA8EB302B13DC1500C20D78 /* PresenceStorage.swift in Sources */,
 				9E146EFE2AEFF5C2007D104B /* CensimentiTypes.swift in Sources */,
 				9E146EFD2AEFF534007D104B /* CensimentiTests.swift in Sources */,
 			);
@@ -249,8 +282,13 @@
 				9E146EDC2AEFDE1D007D104B /* CensimentiTypes.swift in Sources */,
 				9ED8223D2AF04DA600774E45 /* UnitListView.swift in Sources */,
 				9EBFE1C72AEFA79E009F5650 /* MainView.swift in Sources */,
+				9EDB8D312B0F32B0005A28BD /* Roles.swift in Sources */,
+				9EDB8D2D2B0F3200005A28BD /* Group.swift in Sources */,
+				9EDB8D332B0F333D005A28BD /* Branch.swift in Sources */,
 				9ED8223B2AF0481000774E45 /* PresenceStorage.swift in Sources */,
 				9ED822412AF04F9000774E45 /* ActivityView.swift in Sources */,
+				9EDB8D2F2B0F3267005A28BD /* Settings.swift in Sources */,
+				9EA8EB332B13DC7B00C20D78 /* SettingsView.swift in Sources */,
 				9ED8223F2AF04EF600774E45 /* EnrollmentView.swift in Sources */,
 				9EBFE1C52AEFA79E009F5650 /* ScoutManagerApp.swift in Sources */,
 			);
@@ -421,7 +459,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = macOS;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ScoutManager/ScoutManager.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -430,6 +470,7 @@
 				DEVELOPMENT_TEAM = B6S4VJ8666;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,7 +505,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=macosx*]" = macOS;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = ScoutManager/ScoutManager.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
@@ -473,6 +516,7 @@
 				DEVELOPMENT_TEAM = B6S4VJ8666;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
